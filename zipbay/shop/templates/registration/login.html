@@ -1,17 +1,7 @@
-<html>
-  <head>
-    <link
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <title>Zipbay</title>
-    <link rel="icon" href="static/img/icon.png" />
-  </head>
-  <body>
-    <h2>Log In</h2>
-    <form method="post">
-      {% csrf_token %} {{ form.as_p }}
-      <button type="submit">Log In</button>
-    </form>
-  </body>
-</html>
+{% include "layout.html" %} {% block content %}
+<h2>Log In</h2>
+<form method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">Log In</button>
+</form>
+{% endblock %}

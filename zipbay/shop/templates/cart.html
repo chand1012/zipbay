@@ -1,11 +1,32 @@
-<html>
-  <head>
-    <link
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <title>Zipbay</title>
-    <link rel="icon" href="static/img/icon.png" />
-  </head>
-  <body></body>
-</html>
+{% include "layout.html" %} {% block content %}
+<!--Loop through the django session and print the items in the cart-->
+{% if cart %}
+<div class="flex flex-wrap">
+  {% for item in cart %}
+  <div class="w-1/2 p-4">
+    <div class="bg-white shadow-md rounded-lg p-4">
+      <div class="flex flex-wrap">
+        <div class="w-1/2">
+          <img src="{{ item.image }}" alt="{{ item.name }}" class="w-full" />
+        </div>
+        <div class="w-1/2 p-4">
+          <h2 class="text-xl font-bold">{{ item.name }}</h2>
+          <p class="text-sm">{{ item.description }}</p>
+          <p class="text-sm">
+            <span class="font-bold">Price:</span> ${{ item.price }}
+          </p>
+          <p class="text-sm">
+            <span class="font-bold">Quantity:</span> {{ item.quantity }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %} {% else %}
+  <div class="p-4">
+    <p class="text-center">Your cart is empty</p>
+  </div>
+  {% endif %}
+</div>
+
+{% endblock %}
