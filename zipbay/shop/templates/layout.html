@@ -23,7 +23,45 @@
     <title>{% block title %}Zipbay{% endblock %}</title>
     <link rel="icon" href="{% static 'img/icon.png' %}" />
   </head>
-  {% include "components/navbar.html" %}
+  <nav
+    class="
+      font-sans
+      flex flex-col
+      text-center
+      sm:flex-row sm:text-left sm:justify-between
+      py-4
+      px-6
+      bg-white
+      shadow
+      sm:items-baseline
+      w-full
+    "
+  >
+    <div class="mb-2 sm:mb-0">
+      <a
+        href="/"
+        class="text-2xl no-underline text-grey-darkest hover:text-blue-dark"
+        >ZipBay</a
+      >
+    </div>
+    <div>
+      <a
+        href="{% url "cart" %}"
+        class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2"
+        >Cart</a
+      >
+      <a
+        href="{% url "login" %}"
+        class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2"
+        >Sign In</a
+      >
+      <a
+        href="{% url "signup" %}"
+        class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2"
+        >Sign Up</a
+      >
+    </div>
+  </nav>
   <body>
     {% block content %} {% endblock %}
   </body>
