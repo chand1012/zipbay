@@ -1,7 +1,7 @@
 {% include 'layout.html' %} {% block content %} {# needs css #}
-<h2>Sign up</h2>
-<form method="post">
+<h2 class="text-gray-200 text-2xl">Sign up</h2>
+<form method="post" class="text-gray-200">
   {% csrf_token %} {{ form.as_p }}
-  <button type="submit">Sign Up</button>
+  <button type="submit" class="text-gray-200 text-2xl border rounded px-1 pb-1">Sign Up</button>
 </form>
 {% endblock %}

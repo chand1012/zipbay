@@ -24,45 +24,46 @@
     <link rel="icon" href="{% static 'img/icon.png' %}" />
   </head>
   <nav
-    class="
-      font-sans
-      flex flex-col
-      text-center
-      sm:flex-row sm:text-left sm:justify-between
-      py-4
-      px-6
-      bg-white
-      shadow
-      sm:items-baseline
-      w-full
-    "
-  >
-    <div class="mb-2 sm:mb-0">
-      <a
-        href="/"
-        class="text-2xl no-underline text-grey-darkest hover:text-blue-dark"
-        >ZipBay</a
-      >
-    </div>
-    <div>
-      <a
-        href="{% url "cart" %}"
-        class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2"
-        >Cart</a
-      >
-      <a
-        href="{% url "login" %}"
-        class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2"
-        >Sign In</a
-      >
-      <a
-        href="{% url "signup" %}"
-        class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2"
-        >Sign Up</a
-      >
-    </div>
-  </nav>
-  <body>
+  class="
+    font-sans
+    flex flex-col
+    text-center
+    sm:flex-row sm:text-left sm:justify-between
+    py-4
+    px-6
+    bg-gray-900
+    shadow
+    sm:items-baseline
+    w-full
+  "
+>
+  <div class="mb-2 sm:mb-0">
+    <a
+      href="/"
+      class="text-2xl no-underline text-gray-100"
+      >ZipBay</a
+    >
+  </div>
+  <div>
+    <a
+      href="{% url "cart" %}"
+      class="text-lg no-underline text-gray-100"
+      >Cart</a
+    >
+    <a
+      href="{% url "login" %}"
+      class="text-lg no-underline ml-2 text-gray-100"
+      >Sign In</a
+    >
+    <a
+      href="{% url "signup" %}"
+      class="text-lg no-underline ml-2 text-blue-200"
+      >Sign Up</a
+    >
+  </div>
+</nav>
+
+  <body class="bg-gray-800">
     {% block content %} {% endblock %}
   </body>
 </html>

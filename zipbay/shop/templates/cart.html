@@ -4,7 +4,7 @@
 <div class="flex flex-wrap">
   {% for item in cart %}
   <div class="w-1/2 p-4">
-    <div class="bg-white shadow-md rounded-lg p-4">
+    <div class="bg-gray-600 shadow-xl rounded-lg p-4">
       <div class="flex flex-wrap">
         <div class="w-1/2">
           <img
@@ -14,12 +14,12 @@
           />
         </div>
         <div class="w-1/2 p-4">
-          <h2 class="text-xl font-bold">{{ item.product.name }}</h2>
+          <h2 class="text-2xl font-bold text-gray-200">{{ item.product.name }}</h2>
           <p class="text-sm">{{ item.description }}</p>
-          <p class="text-sm">
+          <p class="text-sm text-gray-200">
             <span class="font-bold">Price:</span> ${{ item.product.price }}
           </p>
-          <p class="text-sm">
+          <p class="text-sm text-gray-200">
             <span class="font-bold">Quantity:</span> {{ item.quantity }}
           </p>
         </div>
@@ -29,7 +29,7 @@
             class="
               bg-red-500
               hover:bg-red-700
-              text-white
+              text-gray-200
               font-bold
               py-2
               px-4
