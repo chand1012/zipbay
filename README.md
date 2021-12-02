@@ -5,5 +5,5 @@ pip install pipenv
 pipenv install
 pipenv shell
 cd zipbay
-python manage.py runserver
+python manage.py runserver 8080
 ```
