@@ -12,4 +12,6 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/signup/', views.SignUpView.as_view(), name='signup'),
     path('isp/prj/prj.html', views.redirect_to_index, name='redirect_to_index'),
+    path('isp/prj', views.redirect_to_video, name='redirect_to_video'),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

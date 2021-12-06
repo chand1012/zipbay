@@ -63,3 +63,6 @@ def remove_from_cart(request, item_id):
 
 def redirect_to_index(request):
     return HttpResponseRedirect('/')
+
+def redirect_to_video(request):
+    return HttpResponseRedirect('https://drive.google.com/file/d/1ixSemwP9bV-LPsegX6m8RcDnejduUPFq/view') # put the video page here
