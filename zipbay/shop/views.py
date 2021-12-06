@@ -60,3 +60,6 @@ def remove_from_cart(request, item_id):
     request.session['cart'] = cart
     print(request.session['cart'])
     return HttpResponseRedirect('/cart')
+
+def redirect_to_index(request):
+    return HttpResponseRedirect('/')
